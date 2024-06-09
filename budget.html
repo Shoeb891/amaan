@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="budget.css">
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Budget</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <a href="#" class="logo"><span>The</span> Shepherds</a>
+    <nav class="navbar">
+        <a href="#home">home</a>
+        <a href="#services">services</a>
+        <a href="#about">about</a>
+        <a href="#gallery">gallery</a>
+        <a href="#review">review</a>
+        <a href="#contact">contact</a>
+        <div class="dropdown">
+            <a href="#plans" class="dropbtn">plans</a>
+            <div class="dropdown-content">
+                <a href="packages.html">Packages</a>
+                <a href="budget.html">Your Budget</a>
+            </div>
+        </div>
+    </nav>
+    <div id="menu-bars" class="fas fa-bars"></div>
+</header>
+
+<section class="budget-section">
+    <div class="container">
+        <h2 class="heading">Plan Your <span>Budget</span></h2>
+        <form id="budget-form">
+            <div class="inputBox">
+                <label for="function-type">Type of Function</label>
+                <select id="function-type" name="function-type" required>
+                    <option value="birthday">Birthday</option>
+                    <option value="wedding">Wedding</option>
+                    <option value="get-together">Get-Together</option>
+                </select>
+            </div>
+            <div class="inputBox">
+                <label for="attendees">Number of Attendees</label>
+                <input type="number" id="attendees" name="attendees" required>
+            </div>
+            <div class="inputBox">
+                <label for="duration">Duration of the Event (hours)</label>
+                <input type="number" id="duration" name="duration" required>
+            </div>
+            <div class="inputBox">
+                <label for="location">Preferred Location</label>
+                <input type="text" id="location" name="location" required>
+            </div>
+            <div class="inputBox">
+                <label for="services">Services Needed</label>
+                <div class="services-list">
+                    <input type="checkbox" id="venue" name="services" value="venue">
+                    <label for="venue">Venue Selection</label><br>
+                    <input type="checkbox" id="invitation" name="services" value="invitation">
+                    <label for="invitation">Invitation Card</label><br>
+                    <input type="checkbox" id="entertainment" name="services" value="entertainment">
+                    <label for="entertainment">Entertainment</label><br>
+                    <input type="checkbox" id="food" name="services" value="food">
+                    <label for="food">Food and Drinks</label><br>
+                    <input type="checkbox" id="photography" name="services" value="photography">
+                    <label for="photography">Photography and Videography</label><br>
+                    <input type="checkbox" id="decoration" name="services" value="decoration">
+                    <label for="decoration">Decoration</label>
+                </div>
+            </div>
+            <div class="inputBox">
+                <label for="budget-range">Budget Range</label>
+                <select id="budget-range" name="budget-range" required>
+                    <option value="10000-50000">10000-50000</option>
+                    <option value="50000-100000">50000-100000</option>
+                    <option value="100000-500000">100000-500000</option>
+                    <option value="500000-1000000">500000-1000000</option>
+                </select>
+            </div>
+            <button type="submit" class="btn">Show Plans</button>
+        </form>
+        <div id="plan-details" class="plan-details">
+            <!-- Plan details will be displayed here based on user input -->
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<script src="script2.js">
+   
+    
+</script>
+</body>
+</html>

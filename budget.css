@@ -1,0 +1,174 @@
+/* General styles and root variables */
+:root {
+    --main-color: #3867d6;
+    --secondary-color: #555;
+    --background-color: #222;
+    --container-background: #333;
+    --input-background: #444;
+    --text-color: #fff;
+    --highlight-color: #888;
+}
+
+/* Additional styles for the budget section */
+body {
+    font-family: 'Arial', sans-serif;
+    background: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+}
+
+.budget-section {
+    padding: 2rem 5%;
+    background: var(--background-color);
+    color: var(--text-color);
+}
+
+.budget-section .heading {
+    text-align: center;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+    letter-spacing: 0.1rem;
+}
+
+.budget-section .heading span {
+    color: var(--main-color);
+}
+
+.budget-section .container {
+    max-width: 70rem;
+    margin: 40px auto;
+    background: var(--container-background);
+    padding: 2rem;
+    border-radius: .5rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.budget-section .inputBox {
+    margin-bottom: 1.5rem;
+}
+
+.budget-section .inputBox label {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    color: var(--highlight-color);
+}
+
+.budget-section .inputBox input,
+.budget-section .inputBox select {
+    width: 100%;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: var(--input-background);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-color);
+    font-size: 1.2rem;
+    transition: border 0.3s ease;
+}
+
+.budget-section .inputBox input:focus,
+.budget-section .inputBox select:focus {
+    border: 1px solid var(--main-color);
+    outline: none;
+}
+
+.budget-section .inputBox .services-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.budget-section .inputBox .services-list label {
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+    color: var(--text-color);
+}
+
+.budget-section .inputBox .services-list input[type="checkbox"] {
+    margin-right: .5rem;
+    transform: scale(1.2);
+    accent-color: var(--main-color);
+}
+
+.budget-section .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background: var(--main-color);
+    color: var(--text-color);
+    border: none;
+    border-radius: .5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.budget-section .btn:hover {
+    background: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.plan-details {
+    margin-top: 2rem;
+    background: var(--input-background);
+    padding: 2rem;
+    border-radius: .5rem;
+    display: none;
+}
+
+.plan-details h3 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+}
+
+.plan-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.plan-details ul li {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+    color: var(--highlight-color);
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .budget-section {
+        padding: 2rem 3%;
+    }
+
+    .budget-section .heading {
+        font-size: 2.5rem;
+    }
+
+    .budget-section .container {
+        padding: 1.5rem;
+    }
+
+    .budget-section .inputBox label {
+        font-size: 1.3rem;
+    }
+
+    .budget-section .inputBox input,
+    .budget-section .inputBox select {
+        font-size: 1rem;
+    }
+
+    .budget-section .btn {
+        font-size: 1.2rem;
+        padding: 0.8rem 2rem;
+    }
+
+    .plan-details h3 {
+        font-size: 2rem;
+    }
+
+    .plan-details ul li {
+        font-size: 1.2rem;
+    }
+}

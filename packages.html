@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Packages</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #2c3e50;
+            color: #f0f0f0;
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 60px 0 0 0; /* Added padding to prevent content from being hidden */
+            scroll-behavior: smooth; /* Smooth scrolling */
+        }
+        .container {
+            background-color: #2c3e50;
+            width: 85%;
+            margin: 0 auto;
+            padding: 50px 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 3.5em;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+            color: #e6e6e6;
+        }
+        h2 {
+            text-align: center;
+            font-size: 2.8em;
+            margin: 40px 0;
+            border-bottom: 3px solid #e6e6e6;
+            display: inline-block;
+            padding-bottom: 12px;
+            color: #d1d1d1;
+        }
+        h3 {
+            text-align: center;
+            font-size: 2.3em;
+            margin: 15px 0;
+            color: #f7f7f7;
+        }
+        .category {
+            margin-bottom: 60px;
+        }
+        .packages-wrapper {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: nowrap; /* Changed to nowrap to prevent wrapping */
+        }
+        .package {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            width: 30%; /* Adjust width to fit three packages in a row */
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.4s, box-shadow 0.4s;
+        }
+        .package:hover {
+            transform: scale(1.1);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+        .package ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 15px 0;
+        }
+        .package li {
+            margin: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 1.1em;
+            color: #dddddd;
+        }
+        .package li::before {
+            content: '✓';
+            color: #ffa500;
+            font-size: 1.5em;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        p {
+            font-size: 1.3em;
+            margin: 12px 0;
+            color: #cccccc;
+        }
+        .clearfix::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        nav {
+            background-color: #1a252f;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 5%;
+            position: fixed; /* Fix position */
+            top: 0;
+            width: 100%;
+            z-index: 1000; /* Ensure it's on top of other content */
+        }
+        nav a {
+            color: #f0f0f0;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffa500;
+        }
+        .nav-title a {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-right: auto;
+            color: #f0f0f0; /* Fixed color for the company name */
+            justify-content: left;
+        }
+        .nav-title a:hover {
+            color: #f0f0f0; /* No color change on hover */
+        }
+        .contact-us {
+            display: block;
+            width: 200px;
+            margin: 30px auto;
+            padding: 15px;
+            text-align: center;
+            background-color: #ffa500;
+            color: #2c3e50;
+            font-size: 1.2em;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+        .contact-us:hover {
+            background-color: #e69500;
+        }
+
+        /* Media queries for responsive navbar */
+        @media (max-width: 800px) {
+            nav {
+                flex-wrap: wrap;
+            }
+            .nav-links {
+                width: 100%;
+                display: flex;
+                justify-content: space-around;
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 10px 5px;
+                font-size: 1em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-title">
+            <a href="#">The Shepards</a>
+        </div>
+        <div class="nav-links">
+            <a href="#packages">Wedding</a>
+            <a href="#birthday-packages">Birthday Party</a>
+            <a href="#get-together-packages">Get-together</a>
+            <a href="#corporate-functions">Corporate Functions</a>
+            <a href="#more">More</a>
+            <a href="#more">More</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Event Packages</h1>
+
+        <div id="packages" class="category">
+            <h2>Wedding Packages</h2>
+            <div class="packages-wrapper">
+                <div class="package" id="standard-wedding">
+                    <h3>Standard</h3>
+                    <p>Price Range: ₹2,00,000 - ₹8,00,000</p>
+                    <ul>
+                        <li>Basic Venue</li>
+                        <li>Standard Catering</li>
+                        <li>Basic Decoration</li>
+                        <li>Standard Photography</li>
+                        <li>Basic Entertainment</li>
+                        <li>Basic Invitations</li>
+                    </ul>
+                </div>
+                <div class="package" id="premium-wedding">
+                    <h3>Premium</h3>
+                    <p>Price Range: ₹8,00,000 - ₹15,00,000</p>
+                    <ul>
+                        <li>Premium Venue</li>
+                        <li>Premium Catering</li>
+                        <li>Advanced Decoration</li>
+                        <li>Professional Photography</li>
+                        <li>Live Entertainment</li>
+                        <li>Customized Invitations</li>
+                        <li>Reception Host/MC</li>
+                    </ul>
+                </div>
+                <div class="package" id="luxury-wedding">
+                    <h3>Luxury</h3>
+                    <p>Price Range: ₹10,00,000 - ₹25,00,000</p>
+                    <ul>
+                        <li>Luxury Venue</li>
+                        <li>Gourmet Catering</li>
+                        <li>Designer Decoration</li>
+                        <li>Exclusive Photography & Videography</li>
+                        <li>Celebrity Entertainment</li>
+                        <li>Designer Invitations</li>
+                        <li>Luxury Guest Accommodations</li>
+                        <li>Premium Transportation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="birthday-packages" class="category">
+            <h2>Birthday Packages</h2>
+            <div class="packages-wrapper">
+                <div class="package" id="standard-birthday">
+                    <h3>Standard</h3>
+                    <p>Price Range: ₹50,000 - ₹3,00,000</p>
+                    <ul>
+                        <li>Basic Venue</li>
+                        <li>Standard Catering</li>
+                        <li>Basic Decoration</li>
+                        <li>Standard Photography</li>
+                        <li>Basic Entertainment</li>
+                        <li>Basic Invitations</li>
+                        <li>Cake</li>
+                    </ul>
+                </div>
+                <div class="package" id="premium-birthday">
+                    <h3>Premium</h3>
+                    <p>Price Range: ₹80,000 - ₹5,00,000</p>
+                    <ul>
+                        <li>Premium Venue</li>
+                        <li>Premium Catering</li>
+                        <li>Advanced Decoration</li>
+                        <li>Professional Photography</li>
+                        <li>Live Entertainment (e.g., Clown, Magician)</li>
+                        <li>Customized Invitations</li>
+                        <li>Themed Cake</li>
+                        <li>Party Favors</li>
+                    </ul>
+                </div>
+                <div class="package" id="luxury-birthday">
+                    <h3>Luxury</h3>
+                    <p>Price Range: ₹1,00,000 - ₹8,00,000</p>
+                    <ul>
+                        <li>Luxury Venue</li>
+                        <li>Gourmet Catering</li>
+                        <li>Designer Decoration</li>
+                        <li>Exclusive Photography</li>
+                        <li>Celebrity Entertainment</li>
+                        <li>Designer Invitations</li>
+                        <li>Luxury Guest Accommodations</li>
+                        <li>Premium Transportation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="get-together-packages" class="category">
+            <h2>Get-together Packages</h2>
+            <div class="packages-wrapper">
+                <div class="package" id="standard-get-together">
+                    <h3>Standard</h3>
+                    <p>Price Range: ₹30,000 - ₹1,50,000</p>
+                    <ul>
+                        <li>Basic Venue</li>
+                        <li>Standard Catering</li>
+                        <li>Basic Decoration</li>
+                        <li>Standard Photography</li>
+                        <li>Basic Entertainment</li>
+                    </ul>
+                </div>
+                <div class="package" id="premium-get-together">
+                    <h3>Premium</h3>
+                    <p>Price Range: ₹60,000 - ₹3,00,000</p>
+                    <ul>
+                        <li>Premium Venue</li>
+                        <li>Premium Catering</li>
+                        <li>Advanced Decoration</li>
+                        <li>Professional Photography</li>
+                        <li>Live Entertainment</li>
+                        <li>Customized Invitations</li>
+                    </ul>
+                </div>
+                <div class="package" id="luxury-get-together">
+                    <h3>Luxury</h3>
+                    <p>Price Range: ₹1,00,000 - ₹5,00,000</p>
+                    <ul>
+                        <li>Luxury Venue</li>
+                        <li>Gourmet Catering</li>
+                        <li>Designer Decoration</li>
+                        <li>Exclusive Photography & Videography</li>
+                        <li>Live Band or DJ</li>
+                        <li>Premium Invitations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="corporate-functions" class="category">
+            <h2>Corporate Functions</h2>
+            <div class="packages-wrapper">
+                <div class="package" id="standard-corporate">
+                    <h3>Standard</h3>
+                    <p>Price Range: ₹1,00,000 - ₹5,00,000</p>
+                    <ul>
+                        <li>Conference Room</li>
+                        <li>Basic AV Equipment</li>
+                        <li>Standard Catering</li>
+                        <li>Basic Decoration</li>
+                        <li>Standard Photography</li>
+                    </ul>
+                </div>
+                <div class="package" id="premium-corporate">
+                    <h3>Premium</h3>
+                    <p>Price Range: ₹3,00,000 - ₹10,00,000</p>
+                    <ul>
+                        <li>Premium Venue</li>
+                        <li>Advanced AV Equipment</li>
+                        <li>Premium Catering</li>
+                        <li>Advanced Decoration</li>
+                        <li>Professional Photography</li>
+                        <li>Event Host</li>
+                    </ul>
+                </div>
+                <div class="package" id="luxury-corporate">
+                    <h3>Luxury</h3>
+                    <p>Price Range: ₹5,00,000 - ₹20,00,000</p>
+                    <ul>
+                        <li>Luxury Venue</li>
+                        <li>State-of-the-art AV Equipment</li>
+                        <li>Gourmet Catering</li>
+                        <li>Designer Decoration</li>
+                        <li>Exclusive Photography & Videography</li>
+                        <li>Celebrity Speaker</li>
+                        <li>Luxury Accommodations</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="more" class="category">
+            <h2>More Categories</h2>
+            <p>Our company is always ready to handle new tasks and new categories. For more queries, you can contact us.</p>
+            <a href="index.html" class="contact-us">Contact Us</a>
+        </div>
+    </div>
+</body>
+</html>
